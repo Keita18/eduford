@@ -6,6 +6,37 @@ header {
     min-height: 100vh;
     background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
         url('../assets/banner.png') fixed center/cover;
+
+    .content {
+        position       : absolute;
+        top            : 0;
+        bottom         : 0;
+        left           : 0;
+        right          : 0;
+        display        : flex;
+        flex-direction : column;
+        align-items    : center;
+        justify-content: center;
+        text-align     : center;
+        color          : var(--white);
+        margin         : auto;
+
+        h1 {
+            font-size  : 68px;
+            font-weight: 500;
+        }
+
+        .header-btn {
+            padding   : 1rem 1.5rem;
+            background: none;
+            border    : 1px solid var(--white);
+
+            a {
+                color    : var(--white);
+                font-size: 13px;
+            }
+        }
+    }
 }
 
 .nav {
@@ -115,6 +146,7 @@ header {
                 margin    : auto;
                 transition: var(--transition);
             }
+
             &:hover {
                 &::after {
                     width: 100%;
@@ -130,4 +162,31 @@ header {
     }
 }
 
-@import 'responsive';
+footer {
+    display        : flex;
+    justify-content: center;
+    flex-direction : column;
+    align-items    : center;
+
+    .content {
+        padding-top: 3rem;
+        text-align : center;
+        font-size  : var(--smallText);
+    }
+
+    h5 {
+        font-weight: 600;
+    }
+
+    .social-icons {
+        display: flex;
+        gap    : 0.5rem;
+    }
+
+    i {
+        color: var(--primary-600);
+    }
+
+}
+
+// @import 'responsive';

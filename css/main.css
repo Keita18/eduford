@@ -49,7 +49,7 @@ html {
   --textColor: var(--grey-900);
   --borderRadius: 0.25rem;
   --letterSpacing: 1px;
-  --transition: 0.3s ease-in-out all;
+  --transition: 0.5s ease-in-out all;
   --max-width: 1120px;
   --fixed-width: 600px;
   /* box shadow*/
@@ -283,4 +283,137 @@ ul {
 =============== 
 Navbar
 ===============
-*//*# sourceMappingURL=main.css.map */
+*/
+header {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("../assets/banner.png") fixed center/cover;
+}
+
+.nav {
+  width: 90vw;
+  margin: auto;
+  padding: 1.5rem 0;
+}
+.nav__center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.nav__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav__header img {
+  width: 150px;
+}
+.nav__header .menu-btn {
+  position: relative;
+  cursor: pointer;
+  margin-right: 1rem;
+  z-index: 1;
+  transition: var(--transition);
+}
+.nav__header .menu-btn__burger {
+  position: absolute;
+  width: 28px;
+  right: 0;
+  height: 3px;
+  background: var(--white);
+  transition: var(--transition);
+}
+.nav__header .menu-btn__burger::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 28px;
+  height: 3px;
+  background: var(--white);
+  transition: var(--transition);
+}
+.nav__header .menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 20px;
+  height: 3px;
+  background: var(--white);
+  transition: var(--transition);
+}
+.nav__links {
+  visibility: hidden;
+  position: fixed;
+  top: -100vh;
+  overflow: hidden;
+  left: 0;
+  opacity: 0.8;
+  background: #272727;
+  width: 100vw;
+  transition: var(--transition);
+  height: 100vh;
+}
+.nav__links ul {
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 8rem;
+  gap: 2rem 3rem;
+  align-items: center;
+  overflow: hidden;
+}
+.nav__links a {
+  display: block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.nav__links li::after {
+  content: "";
+  width: 0%;
+  background: #f44336;
+  display: block;
+  height: 2px;
+  margin: auto;
+  transition: var(--transition);
+}
+.nav__links li:hover::after {
+  width: 100%;
+}
+.nav .open {
+  visibility: visible;
+  top: 0;
+}
+
+@media screen and (min-width: 702px) {
+  .nav .menu-btn {
+    display: none;
+  }
+  .nav__center {
+    flex-direction: row;
+  }
+  .nav__header {
+    width: initial;
+  }
+  .nav__links {
+    display: contents;
+    position: initial;
+    top: 0;
+    height: initial;
+    background: transparent;
+  }
+  .nav__links ul {
+    visibility: visible;
+    flex-flow: row nowrap;
+    margin: 0;
+  }
+  .nav__links ul a {
+    font-size: 0.75rem;
+  }
+}/*# sourceMappingURL=main.css.map */

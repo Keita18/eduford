@@ -1,0 +1,33 @@
+@media screen and (min-width: 702px) {
+    .nav {
+        .menu-btn {
+            display: none;
+        }
+
+        &__center {
+            flex-direction: row;
+        }
+
+        &__header {
+            width: initial;
+        }
+
+        &__links {
+            display: contents;
+            position: initial;
+            top: 0;
+            height: initial;
+            background: transparent;
+
+            ul {
+                visibility: visible;
+                flex-flow: row nowrap;
+                margin: 0;
+
+                a {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+    }
+}

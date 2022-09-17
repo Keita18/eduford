@@ -30,4 +30,14 @@
             }
         }
     }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .testmonial {
+        #{&}__items {
+            grid-template-columns: 1fr 1fr;
+        }    
+    }
 }

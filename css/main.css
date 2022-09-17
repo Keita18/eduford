@@ -308,13 +308,17 @@ header .content h1 {
   font-weight: 500;
 }
 header .content .header-btn {
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 2rem;
   background: none;
   border: 1px solid var(--white);
+  margin-top: 1rem;
 }
 header .content .header-btn a {
   color: var(--white);
   font-size: 13px;
+}
+header .content > * {
+  max-width: 90vw;
 }
 
 .nav {
@@ -346,7 +350,7 @@ header .content .header-btn a {
   position: relative;
   cursor: pointer;
   margin-right: 1rem;
-  z-index: 1;
+  z-index: 3;
   transition: var(--transition);
 }
 .nav__header .menu-btn__burger {
@@ -379,9 +383,10 @@ header .content .header-btn a {
   visibility: hidden;
   position: fixed;
   top: -100vh;
+  z-index: 1;
   overflow: hidden;
   left: 0;
-  opacity: 0.8;
+  opacity: 0.98;
   background: #272727;
   width: 100vw;
   transition: var(--transition);
@@ -438,4 +443,31 @@ footer .social-icons {
 }
 footer i {
   color: var(--primary-600);
+}
+
+@media screen and (min-width: 702px) {
+  .nav .menu-btn {
+    display: none;
+  }
+  .nav__center {
+    flex-direction: row;
+  }
+  .nav__header {
+    width: initial;
+  }
+  .nav__links {
+    display: contents;
+    position: initial;
+    top: 0;
+    height: initial;
+    background: transparent;
+  }
+  .nav__links ul {
+    visibility: visible;
+    flex-flow: row nowrap;
+    margin: 0;
+  }
+  .nav__links ul a {
+    font-size: 0.75rem;
+  }
 }/*# sourceMappingURL=main.css.map */

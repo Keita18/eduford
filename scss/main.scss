@@ -26,18 +26,6 @@
             font-weight: 500;
         }
 
-        .header-btn {
-            padding   : 0.75rem 2rem;
-            background: none;
-            border    : 1px solid var(--white);
-            margin-top: 1rem;
-
-            a {
-                color    : var(--white);
-                font-size: 13px;
-            }
-        }
-
         & > * {
             max-width: 90vw;
         }
@@ -193,6 +181,18 @@ footer {
         color: var(--primary-600);
     }
 
+}
+
+.btn-wrapper {
+    padding   : 0.75rem 2rem;
+    background: none;
+    border    : 1px solid var(--white);
+    margin-top: 1rem;
+
+    a {
+        color    : var(--white);
+        font-size: 13px;
+    }
 }
 
 @import 'responsive';

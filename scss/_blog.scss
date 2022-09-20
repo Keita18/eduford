@@ -1,0 +1,45 @@
+.blog {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem 2rem;
+
+    .blog__content {
+        text-align: left;
+
+        img {
+            margin-bottom: 3rem;
+        }
+    }
+
+    .form {
+        width: auto;
+    }
+
+    &__categirie {
+        text-align: left;
+        padding: 0.6rem 0;
+        h5 {
+            text-align: center;
+            color: var(--white);
+            background-color: #f44336;
+            font-size: 1rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            position: relative;
+            margin: 0;
+            padding: 8px;
+
+            span {
+                display: inline-block;
+                position: absolute;
+                // left: 4px;
+                right: 0;
+            }
+        }
+
+
+    }
+}

@@ -437,6 +437,43 @@ Navbar
   color: var(--white);
 }
 
+.blog {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem 2rem;
+}
+.blog .blog__content {
+  text-align: left;
+}
+.blog .blog__content img {
+  margin-bottom: 3rem;
+}
+.blog .form {
+  width: auto;
+}
+.blog__categirie {
+  text-align: left;
+  padding: 0.6rem 0;
+}
+.blog__categirie h5 {
+  text-align: center;
+  color: var(--white);
+  background-color: #f44336;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.blog__categirie p {
+  position: relative;
+  margin: 0;
+  padding: 8px;
+}
+.blog__categirie p span {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+
 .main-header {
   width: 100%;
   min-height: 100vh;
@@ -631,5 +668,8 @@ footer i {
   }
   .about {
     grid-template-columns: 1fr 1fr;
+  }
+  .blog {
+    grid-template-columns: 2fr 1fr;
   }
 }/*# sourceMappingURL=main.css.map */

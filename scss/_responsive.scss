@@ -40,8 +40,12 @@
         }    
     }
 
-    .about {
+    .about, .contact {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .contact {
+        gap: 2rem;
     }
 
     .blog {
